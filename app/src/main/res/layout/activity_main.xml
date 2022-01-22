@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recent_tap"
+    android:background="#756E6E"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:id="@+id/recent_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="top"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="12">
+
+        <ImageView
+            android:id="@+id/back_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/tap_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:textColor="#FFFFFF"
+            android:text="탭"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/search_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+            app:tint="#FFFF" />
+
+        <ImageView
+            android:id="@+id/Catagory_icon_main"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/catagory_icon" />
+    </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/recentTap_1st"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/frame_stroke"
+        android:backgroundTint="#FF0000"
+        android:backgroundTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="@id/recent_tap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/recent_tap"
+        app:layout_constraintRight_toRightOf="@id/recent_tap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recent_title"
+        app:layout_constraintVertical_bias="0.35000002">
+
+        <LinearLayout
+            android:id="@+id/contnent_1stTap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/tap_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="홈 - YouTube"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/closeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/close_icon"
+                    app:tint="#FFFF" />
+
+            </TableRow>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFF"
+                app:columnCount="7"
+                app:orientation="horizontal"
+                app:rowCount="3">
+
+                <ImageButton
+                    android:id="@+id/youtubeButton"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/yt_button"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/play_icon" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Premium"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_column="1"
+                    app:layout_columnSpan="4"
+                    app:layout_gravity="fill"
+                    app:layout_row="0" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_column="5"
+                    app:layout_row="0"
+                    app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+                    app:tint="#009688" />
+
+                <Button
+                    android:id="@+id/username"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/circle_icon"
+                    android:text="정빈"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    app:layout_column="6"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/catagory1"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="전체"
+                    android:textSize="10sp"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory2"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="요리"
+                    android:textSize="10sp"
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory3"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="공예"
+                    android:textSize="10sp"
+                    app:layout_column="2"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory4"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="피트니스"
+                    android:textSize="10sp"
+                    app:layout_column="3"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory5"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="게임"
+                    android:textSize="10sp"
+                    app:layout_column="4"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory6"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="음악"
+                    android:textSize="10sp"
+                    app:layout_column="5"
+                    app:layout_row="1" />
+
+                <Button
+                    android:id="@+id/catagory7"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/catagory_stroke"
+                    android:text="운동"
+                    android:textSize="10sp"
+                    app:layout_column="6"
+                    app:layout_row="1" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    app:layout_column="0"
+                    app:layout_row="2"
+                    app:layout_columnSpan="7"
+                    app:srcCompat="@drawable/yt_thumbnail" />
+
+
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/recentTap_2nd"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/frame_stroke"
+        android:backgroundTint="#FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recent_title"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <RelativeLayout
+            android:id="@+id/content_2ndTap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/frame_stroke">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Google"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/close_icon_black" />
+
+            <TextView
+                android:id="@+id/content_2ndTap_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="전체"
+                android:textColor="#0000FF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/content_2ndTap_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/content_2ndTap_all"
+                android:text="이미지"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/catagory_icon_2ndTap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="40dp"
+                app:srcCompat="@drawable/catagory_icon_3x3" />
+
+            <Button
+                android:id="@+id/username_2ndTap"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/imageView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/circle_icon"
+                android:text="정빈"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/google_logo_img"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/catagory_icon_2ndTap"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/catagory_icon_2ndTap"
+                android:layout_toEndOf="@+id/content_2ndTap_image"
+                app:srcCompat="@drawable/google_logo" />
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/google_logo_img"
+                android:layout_alignStart="@+id/content_2ndTap_all"
+                android:layout_alignEnd="@+id/username_2ndTap"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/search_stroke"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="비밀모드\n켜기"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="새 탭"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
